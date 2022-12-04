@@ -3,10 +3,9 @@
 
 from sys import argv
 
-subdir = argv[1]
-input = './' + subdir + '/' + argv[3]
+src = argv[1]
 function = argv[2]
-src = subdir + '/aoc.py'
+input = argv[3]
 
 with open(src, 'rb') as f:
     code = compile(f.read(), src, 'exec')
