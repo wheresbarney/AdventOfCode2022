@@ -12,7 +12,7 @@ with open(src, 'rb') as f:
 exec(code)
 
 with open(input, 'r') as f:
-    data = [l.strip() for l in f]
+    data = [l.rstrip() for l in f]
     if '1' in function:
         output = q1(data)
     else:
