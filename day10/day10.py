@@ -6,7 +6,7 @@ class Cpu:
         self.x = 1
         self.sum_signal_strength = 0
 
-    def tick(self):
+    def tick(self) -> None:
         h = (self.clock - 1) % 40
         if self.x >= h-1 and self.x <= h+1:
             px = '#'
@@ -20,7 +20,7 @@ class Cpu:
             self.sum_signal_strength += signal_strength
         self.clock += 1
 
-    def add(self, val):
+    def add(self, val: int) -> None:
         self.x += val
 
 
