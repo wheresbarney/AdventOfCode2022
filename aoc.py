@@ -1,11 +1,14 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python3.10
 # https://adventofcode.com/2022
 
 from sys import argv
 
-src = argv[1]
+# day func input
+
+day = 'day' + argv[1]
+src = f'./{day}/{day}.py'
 function = argv[2]
-input = argv[3]
+input = f'./{day}/{argv[3]}.txt'
 
 with open(src, 'rb') as f:
     code = compile(f.read(), src, 'exec')
